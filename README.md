@@ -38,7 +38,7 @@ Google-Maps-API-Destination-Explorer/
 
 ### Map Info Window and Detail Map
 
-![Map Info Window Detail Map](screenshots/2_Map_Info_Window_Detail_Map.png)
+![Map Info Window Detail Map](screenshots/2_Map_Info_Window_Detail_Seattle_Map.png)
 
 ## Setup Note
 
