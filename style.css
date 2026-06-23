@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #b0c1db, #fff7f5);
+  color: #333033;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+/* Top header, Toyhouse-style */
+.top-nav {
+  height: 56px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+/* Page layout */
+.page {
+  max-width: 1260px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 46px;
+  padding: 0 28px;
+  align-items: start;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f8f6f4;
+  box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.1);
+  padding: 26px 14px 20px;
+  text-align: center;
+}
+
+.side-icon {
+  width: 105px;
+  height: 105px;
+  margin: 0 auto 12px;
+  background: #b0c1db;
+  border: 4px solid #5c71ad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 54px;
+}
+
+.sidebar h2 {
+  margin: 6px 0 14px;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.side-links {
+  margin: 18px 0;
+  text-align: left;
+  color: #333033;
+}
+
+.side-links p {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.credit {
+  background: #b0c1db;
+  color: #ffffff;
+  padding: 8px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* Main content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.toy-card {
+  position: relative;
+  background: #f8f6f4;
+  box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+}
+
+.card-inner {
+  border: 4px solid #5c71ad;
+  background: #f8f6f4;
+}
+
+.card-header {
+  background: #5c71ad;
+  padding: 10px 12px;
+}
+
+.card-header h1 {
+  margin: 0;
+  color: #f8f6f4;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.divider {
+  height: 4px;
+  background: #5c71ad;
+  margin-top: 4px;
+}
+
+.divider.bottom {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+/* Profile card */
+.profile-body {
+  display: grid;
+  grid-template-columns: 1fr 210px;
+  gap: 22px;
+  align-items: center;
+}
+
+.profile-text h2 {
+  text-align: center;
+  color: #5c71ad;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  margin: 0 0 4px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.profile-text p {
+  line-height: 1.55;
+  font-size: 15px;
+}
+
+.small-note {
+  font-size: 13px;
+  color: rgba(51, 48, 51, 0.7);
+}
+
+.profile-image {
+  height: 210px;
+  background: #fffafa;
+  border: 4px solid #5c71ad;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 4px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 82px;
+}
+
+/* Stars, like the Toyhouse layout */
+.star {
+  position: absolute;
+  z-index: 10;
+  font-size: 68px;
+  line-height: 1;
+  color: #d8d8d8;
+  text-shadow:
+    -2px 0 #ffffff,
+     0 2px #ffffff,
+     2px 0 #ffffff,
+     0 -2px #ffffff;
+  animation: spinStar 6s linear infinite;
+}
+
+.star-left {
+  left: -38px;
+  top: -38px;
+  transform-origin: center;
+}
+
+.star-right {
+  right: -34px;
+  top: -34px;
+  transform-origin: center;
+}
+
+@keyframes spinStar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Map */
+#map {
+  width: 100%;
+  height: 560px;
+  border: 4px solid #5c71ad;
+}
+
+/* Feature section */
+.features {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.features h3 {
+  color: #5c71ad;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Raleway", sans-serif;
+  margin: 0 0 6px;
+}
+
+.features li {
+  margin: 7px 0;
+}
+
+/* Google Maps info card */
+.info-card {
+  width: 280px;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #333033;
+}
+
+.info-card-inner {
+  background: #f8f6f4;
+  border: 4px solid #5c71ad;
+  padding: 10px;
+}
+
+.info-card-title {
+  background: #5c71ad;
+  color: #f8f6f4;
+  padding: 8px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.info-type {
+  color: #5c71ad;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.info-description {
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.info-button {
+  display: inline-block;
+  border: 2px solid #5c71ad;
+  color: #5c71ad;
+  background: transparent;
+  font-weight: 700;
+  padding: 7px 10px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.info-button:hover {
+  background: #5c71ad;
+  color: #f8f6f4;
+}
+
+.detail-map {
+  width: 250px;
+  height: 170px;
+  border: 3px solid #5c71ad;
+  overflow: hidden;
+}
+
+/* Mobile friendly */
+@media (max-width: 950px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .profile-body {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
